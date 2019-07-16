@@ -13,6 +13,11 @@ class Make < Formula
     sha256 "1d55b106718979c19a8e6ad9974fe9dbea6501daafcf0014e80143efd37dd74e" => :sierra
   end
 
+  patch do
+    url "https://raw.githubusercontent.com/osresearch/heads/make-4.2.1/patches/make-4.2.1.patch"
+    sha256 "44781fb0f5c7f44bf3a6c105150edeae483af3b78d8cb7070c59b41122df8ea6"
+  end
+  
   def install
     args = %W[
       --disable-dependency-tracking
@@ -20,9 +25,7 @@ class Make < Formula
       --program-prefix=g
     ]
 
-    File.open('make-alloc.patch', 'w') {|f| f.write(::DATA.read) }
     system "./configure", *args
-    system "patch", "-p1", "-i", "make-alloc.patch"
     system "make", "install"
 
     (libexec/"gnubin").install_symlink bin/"gmake" =>"make"
