@@ -1,9 +1,9 @@
 class Make < Formula
   desc "Utility for directing compilation"
   homepage "https://www.gnu.org/software/make/"
-  url "https://ftp.gnu.org/gnu/make/make-4.1.tar.bz2"
-  mirror "https://ftpmirror.gnu.org/make/make-4.1.tar.bz2"
-  sha256 "0bc7613389650ee6a24554b52572a272f7356164fd2c4132b0bcf13123e4fca5"
+  url "https://ftp.gnu.org/gnu/make/make-4.0.tar.bz2"
+  mirror "https://ftpmirror.gnu.org/make/make-4.0.tar.bz2"
+  sha256 "e60686c7afede62cc8c86ad3012cf081ea4887daf9d223ce7115703b2bb2dbdb"
   revision 1
 
   def install
