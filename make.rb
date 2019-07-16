@@ -20,7 +20,7 @@ class Make < Formula
       --program-prefix=g
     ]
 
-    File.open('make-alloc.patch', 'w') {|f| f.write(DATA.read) }
+    File.open('make-alloc.patch', 'w') {|f| f.write(::DATA.read) }
     system "./configure", *args
     system "patch", "-p1", "-i", "make-alloc.patch"
     system "make", "install"
