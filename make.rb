@@ -14,7 +14,7 @@ class Make < Formula
   end
 
   patch do
-    url "https://raw.githubusercontent.com/osresearch/heads/make-4.2.1/patches/make-4.2.1.patch"
+    url "https://raw.githubusercontent.com/johnewart/homebrew-make/master/make-4.2.1-glob.patch"
     sha256 "44781fb0f5c7f44bf3a6c105150edeae483af3b78d8cb7070c59b41122df8ea6"
   end
   
